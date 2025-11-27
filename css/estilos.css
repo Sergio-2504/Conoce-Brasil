@@ -1,0 +1,198 @@
+/* ============================
+   ESTILOS GENERALES
+============================ */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #02aa18;
+}
+
+/* ============================
+   CABECERA
+============================ */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border-bottom: 4px solid #02aa18;
+}
+
+header .logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #0b1ae7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    color: #02aa18;
+    text-decoration: underline;
+}
+
+/* ============================
+   SELECTOR DE IDIOMA
+============================ */
+header .idioma select {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #02aa18;
+    background-color: #fff;
+    color: #333;
+}
+
+/* ============================
+   BANNER PRINCIPAL
+============================ */
+.banner {
+    position: relative;
+    background-image: url('../imagenes/Paisaje.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Capa de contraste para accesibilidad */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* Asegurar que el contenido esté sobre la capa */
+.banner h1,
+.banner p,
+.banner .btn {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================
+   BOTONES
+============================ */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 3px solid #02aa18;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 17px;
+    color: #fff;
+    background-color: #02aa18;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #fff;
+    color: #02aa18;
+    outline: 2px solid #02aa18;
+}
+
+/* ============================
+   IMÁGENES Y CONTENEDORES
+============================ */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* ============================
+   SECCIONES VARIAS
+============================ */
+#gastronomia {
+    display: none;
+}
+
+.Gastronomia-icon {
+    width: 20px;
+}
+
+.Gastronomia label {
+    cursor: pointer;
+    display: none;
+}
+
+/* ============================
+   PIE DE PÁGINA
+============================ */
+footer {
+    background-color: #fff;
+    color: #0b1ae7;
+    text-align: center;
+    padding: 1rem;
+    border-top: 4px solid #02aa18;
+    font-size: 14px;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .banner {
+        height: 70vh;
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}
